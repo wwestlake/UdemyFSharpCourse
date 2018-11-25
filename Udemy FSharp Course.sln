@@ -5,7 +5,11 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Module 1", "Module 1", "{BF29ACB9-AF89-4158-B358-FC385369E687}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "UserInput", "UserInput\UserInput.fsproj", "{6D9AC72B-D9F3-456E-A2D4-425820CE7F8D}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "UserInput", "UserInput\UserInput.fsproj", "{6D9AC72B-D9F3-456E-A2D4-425820CE7F8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MOdule 2", "MOdule 2", "{3EEA2AC5-AA5F-4AA6-932E-AAE16716D6D8}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Module2TestConsole", "Module2TestConsole\Module2TestConsole.fsproj", "{57877356-5BFF-4C21-BC6C-45545BA5C3E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{6D9AC72B-D9F3-456E-A2D4-425820CE7F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D9AC72B-D9F3-456E-A2D4-425820CE7F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D9AC72B-D9F3-456E-A2D4-425820CE7F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57877356-5BFF-4C21-BC6C-45545BA5C3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57877356-5BFF-4C21-BC6C-45545BA5C3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57877356-5BFF-4C21-BC6C-45545BA5C3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57877356-5BFF-4C21-BC6C-45545BA5C3E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6D9AC72B-D9F3-456E-A2D4-425820CE7F8D} = {BF29ACB9-AF89-4158-B358-FC385369E687}
+		{57877356-5BFF-4C21-BC6C-45545BA5C3E9} = {3EEA2AC5-AA5F-4AA6-932E-AAE16716D6D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A3CB6FD-86FF-4059-931C-2ACFBEB190B2}

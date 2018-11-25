@@ -6,10 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Source\File1.fs" />
+    <Compile Include="Source\File2.fs" />
+    <Compile Include="Source\File3.fs" />
+    <Compile Include="Source\File4.fs" />
+    <Compile Include="Special\File1.fs" />
     <Compile Include="Program.fs" />
-    <None Include="Module1Script.fsx" />
+    <None Include="Scripts\CodingChallenge1.fsx" />
+    <None Include="Scripts\Module1Script.fsx" />
   </ItemGroup>
-
-  <ItemGroup />
 
 </Project>
