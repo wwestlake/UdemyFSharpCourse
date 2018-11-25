@@ -7,8 +7,8 @@
 
   <ItemGroup>
     <None Include="Scripts\RecursionAndAccumulators.fsx" />
-    <None Include="Scripts\FunctionSignatures.fsx" />
     <None Include="Scripts\CurryingAndPartialApplication.fsx" />
+    <None Include="Scripts\FunctionSignatures.fsx" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
