@@ -9,6 +9,8 @@
     <None Include="Scripts\RecursionAndAccumulators.fsx" />
     <None Include="Scripts\CurryingAndPartialApplication.fsx" />
     <None Include="Scripts\FunctionSignatures.fsx" />
+    <None Include="Scripts\InnerFunctions.fsx" />
+    <None Include="Scripts\CodingChallengeReview.fsx" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
