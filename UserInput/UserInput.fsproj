@@ -10,10 +10,13 @@
     <Compile Include="Source\File2.fs" />
     <Compile Include="Source\File3.fs" />
     <Compile Include="Source\File4.fs" />
-    <Compile Include="Special\File1.fs" />
     <Compile Include="Program.fs" />
     <None Include="Scripts\CodingChallenge1.fsx" />
     <None Include="Scripts\Module1Script.fsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Special\" />
   </ItemGroup>
 
 </Project>

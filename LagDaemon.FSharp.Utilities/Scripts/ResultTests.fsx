@@ -10,6 +10,9 @@ type Result<'Tsuccess, 'Tfailure> =
     | Success of 'Tsuccess
     | Failure of 'Tfailure
 
+let succeed x = Success x
+let fail x = Failure x
+
 let bind f input =
     match input with
     | Success s -> f s
@@ -47,6 +50,17 @@ checkPassword 4 8 null
 checkPassword 4 8 ""
 checkPassword 4 8 "something"
 checkPassword 4 8 "password"
+
+
+let func1 x = x + 3
+let func2 y = y + 4
+
+let lift f =
+    f >> succeed
+
+let lifted x = lift func1
+
+
 
 
 

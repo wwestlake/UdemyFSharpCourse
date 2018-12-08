@@ -19,6 +19,7 @@
 module Password =
 
     open System
+    open System.Text.RegularExpressions
     open Result
 
     type PasswordRules = {
@@ -39,6 +40,19 @@ module Password =
         MinSpecial = minspecil;
     }
 
+    let lowerCase = ['a' .. 'z']
+    let upperCase = ['A' .. 'Z']
+    let digits = ['0' .. '9']
+    let special = List.concat [['!'..'/'];[':' .. '@'];['['..'`'];['{'..'~']]
+
+    let countElements list1 list2 =
+        let rec counter l1 l2 count =
+            match l1 with
+            | [] -> count
+            | head :: rest -> if List.contains head list2
+                              then counter rest l2 (count + 1)
+                              else counter rest l2 count
+        counter list1 list2 0
 
 
     let passwordIsNotNull password =
@@ -46,7 +60,13 @@ module Password =
         then Failure "Password must not be null or empty"
         else Success password
 
-    let passwordLength rules (password:string) =
+    let checkPasswordForWhitespace password =
+        let regex = new Regex(@"\s")
+        match regex.IsMatch(password) with
+        | true -> "Password must not contain white space" |> fail
+        | false -> password |> succeed
+
+    let checkPasswordLength rules (password:string) =
         let errorString = sprintf "Password length must be >= %d and <= %d" rules.MinLength rules.MaxLength
 
         match password.Length < rules.MinLength, password.Length > rules.MaxLength with
@@ -55,5 +75,34 @@ module Password =
         | false, false -> Success password
         | _,_ -> Failure "can't happen"
 
+    let checkLowerCase rules (password: string) =
+        let count = countElements (Seq.toList password) lowerCase
+        if count >= rules.MinLowerCase 
+        then password |> succeed
+        else sprintf "Password must contain at least %d lower case characters." rules.MinLowerCase |> fail
 
+    let checkUpperCase rules (password: string) =
+        let count = countElements (Seq.toList password) upperCase
+        if count >= rules.MinUpperCase
+        then password |> succeed
+        else sprintf "Password must contain at least %d upper case characters." rules.MinUpperCase |> fail
 
+    let checkDigits rules (password: string) =
+        let count = countElements (Seq.toList password) digits
+        if count >= rules.MinDigits
+        then password |> succeed
+        else sprintf "Password must contain at least %d digit characters." rules.MinDigits |> fail
+
+    let checkSpecial rules (password: string) =
+        let count = countElements (Seq.toList password) special
+        if count >= rules.MinSpecial
+        then password |> succeed
+        else sprintf "Password must contain at least %d special characters." rules.MinSpecial |> fail
+
+    let combinedPasswordChecks rules password =
+        password |> passwordIsNotNull
+        >>= checkPasswordLength rules
+        >>= checkLowerCase rules
+        >>= checkUpperCase rules
+        >>= checkDigits rules
+        >>= checkSpecial rules

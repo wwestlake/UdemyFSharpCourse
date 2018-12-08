@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Scripts\StringsAndSeq.fsx" />
     <None Include="Scripts\ResultTests.fsx" />
     <Compile Include="Result.fs" />
     <Compile Include="Password.fs" />

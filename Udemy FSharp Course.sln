@@ -13,7 +13,9 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Module2TestConsole", "Modul
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MOdule 3", "MOdule 3", "{A54F8BEF-9FC8-4150-BAEE-40EF72489181}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "LagDaemon.FSharp.Utilities", "LagDaemon.FSharp.Utilities\LagDaemon.FSharp.Utilities.fsproj", "{125074E0-509A-459B-B5F7-12A48651AE02}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "LagDaemon.FSharp.Utilities", "LagDaemon.FSharp.Utilities\LagDaemon.FSharp.Utilities.fsproj", "{125074E0-509A-459B-B5F7-12A48651AE02}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "BusinessRulesUnitTests", "BusinessRulesUnitTests\BusinessRulesUnitTests.fsproj", "{BEE99F69-2BFB-49E6-B48E-7818289C9184}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{125074E0-509A-459B-B5F7-12A48651AE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{125074E0-509A-459B-B5F7-12A48651AE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{125074E0-509A-459B-B5F7-12A48651AE02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE99F69-2BFB-49E6-B48E-7818289C9184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE99F69-2BFB-49E6-B48E-7818289C9184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE99F69-2BFB-49E6-B48E-7818289C9184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE99F69-2BFB-49E6-B48E-7818289C9184}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{6D9AC72B-D9F3-456E-A2D4-425820CE7F8D} = {BF29ACB9-AF89-4158-B358-FC385369E687}
 		{57877356-5BFF-4C21-BC6C-45545BA5C3E9} = {3EEA2AC5-AA5F-4AA6-932E-AAE16716D6D8}
 		{125074E0-509A-459B-B5F7-12A48651AE02} = {A54F8BEF-9FC8-4150-BAEE-40EF72489181}
+		{BEE99F69-2BFB-49E6-B48E-7818289C9184} = {A54F8BEF-9FC8-4150-BAEE-40EF72489181}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5A3CB6FD-86FF-4059-931C-2ACFBEB190B2}
